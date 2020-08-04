@@ -26,7 +26,9 @@ type: bam or bed, default bam
 _Note_: <br>
 Run by python2; <br>
 Require bedtools pre-installed in PATH, otherwise need to change the path of bedtools; <br>
+Remove reads with Flag 4 (umapped reads) in bam file, therefore need to perform other Flag selection before running this conversion step <br>
 The attribution (column9, using ';' as delimiter) in gtf output contains both column 4 and column 5 information from bed file, or ReadID and MAPQ score from bam file. e.g. M01193:350:000000000-AAM45:1:1108:18550:9187;44 <br>
+
 
 ### **CountTssGTF.py** <br>
 Count the TPM (number of 5'end tag per million of reads) or nio for each TSS. <br>
