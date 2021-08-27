@@ -21,14 +21,15 @@ Run by python2; <br>
 Count all the mappable reads presenting in bam file, therefore select the primary mapping (-F 256, -F 2028) on the STAR bam file if necessary before this step <br>
 nio: number of reads starting at this TSS positions (5'end tag); <br>
 TPM = nio/(total number of entries in the bed file converted by bamtobed) * 1,000,000 <br>
-<pre><b>python CountTssFromBam.py --input input.bam --output output.tsscount.gtf --cutoff float --path bedtoolsPATH</b> </pre>
+<pre><b>python CountTssFromBam.py --input input.bam --output output.tsscount.gtf --cutoff float --type bam --path bedtoolsPATH</b> </pre>
 input: a sorted and indexed bam file containing the primary reads for TSS counting. or a bed file converteb from the bam file. <br>
 output: a gtf file containing the TPM and nio (tsscount.gtf file), sorted by chromosome and start. <br>
 <ol>    
 Column1, 2, 3, 4, 5, 6, 7, 8: chr, source, feature, TSS, TSS, TPM, strand, coordination <br>
 Column9: TPM, Attribution: nio;TPM;. e.g. nio=2;TPM=0.15128805897
 </ol>
-cutoff: a float, only the TSS positions with TPM>=cutoff are reported in the output. Default 0 means no cutoff applied. <br>
+cutoff: a float, Default 0. Only the TSS positions with TPM>=cutoff are reported in the output. Default 0 means no cutoff applied. <br>
+type: type of input, bam or bed, Default bam <br>
 path: Default None. bedtools PATH, e.g. ~/bedtools. If bedtools in PATH, leave it as Default. <br>
 
 ### **CompareTSS.py** <br>
