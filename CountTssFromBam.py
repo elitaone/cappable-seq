@@ -14,7 +14,7 @@ Based on python2.7
 Require bedtools preinstalled
 
 Usage:
-$python CountTssFromBam.py --input .bam --output tsscount.gtf --cutoff (default 0) --path (default None)
+$python CountTssFromBam.py --input .bam --output tsscount.gtf --cutoff (default 0) --path (default None) --type (default bam)
 
 --input:
     sorted and indexed bam file contains only primary mapping (samtools -F 256) for Read1.
@@ -27,6 +27,7 @@ $python CountTssFromBam.py --input .bam --output tsscount.gtf --cutoff (default 
         nio: number of TSS tags
         TPM: TSS tags per million of mappable reads
 --cutoff: a float used to filter the positions whose TPM are below the defined cutoff (default 0, no filtering) in the output
+--type: type of input, bam or bed, Default bam
 --path: bedtools path, default None means that bedtools is executable in PATH
         e.g. /mnt/home/yan/bin
 
