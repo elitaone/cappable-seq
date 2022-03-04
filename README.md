@@ -1,6 +1,7 @@
 ## Cappable-seq Analysis
 This document explains all the scripts used for analyzing Cappable-seq data. <br>
 Scripts are developed and maintained by Bo Yan (New England Biolabs, yan@neb.com). <br>
+Publication and citation: DOI: 10.1101/gr.275784.121 <br>
 
 ### **Pipeline for Cappable-seq or ReCappable-seq TSS analysis** <br>
 - TSS library is prepared using small RNA library (ligation based) preparation kit <br>
